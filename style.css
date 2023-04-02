@@ -1,0 +1,236 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+
+@keyframes appear {
+    0% {
+      transform: translateY(30px);
+      opacity: 0;
+    }
+    100% {
+      transform: translate(0px);
+      opacity: 1;
+    }
+  }
+
+
+  @keyframes spin {
+    from {transform: rotate(0turn)}
+    /*to {transform:rotate(1turn)}*/
+  }
+
+  @keyframes dis {
+    100% {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #D3D3D3;
+    padding: 0;
+    margin: 0;
+    
+}
+
+
+main{
+  width: 30%;
+  margin: 5em auto;
+  max-width: 60%;
+}
+
+.loader{
+   display: flex;
+   justify-content: space-between;
+   background-color: #E5383B;
+   border-radius: 15px;
+   border: none;
+   color: white;
+   padding: 10px 25px 10px 20px;
+   cursor: pointer;
+   position: relative;
+}
+
+
+ .text{
+    line-height: 5px;
+    font-family: 'Lato';
+    font-size: 15px;
+    display: block;
+    text-align: left;
+    animation: appear 1s ease .5s forwards;
+    color: #FFF;
+    font-weight: 900;
+ }
+
+.text1 {
+    font-size: 28px; 
+    font-weight: 1300;
+}
+
+.card {
+  padding: 0rem;
+  border-radius: 20px;
+}
+
+.flex {
+  display: flex;
+  gap: 1rem;
+}
+
+.column {
+  flex-direction: column;
+}
+
+main .chart{
+    display:block;
+    background-color: white ;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    animation: appear 1s ease 1s forwards;
+}
+
+
+
+main .loader img:hover{
+  transform: rotate(2turn);
+} 
+
+main .loader img{
+  transition:transform 1s;
+  transform: rotate(1turn);
+  animation: spin 1s ease;
+  background: linear-gradient(to bottom right);
+  color: #faf0fa;
+  width: 20%;
+}
+  
+
+h1 {
+    font-family: 'Lato';
+    text-align: left;
+    font-size: 25px;
+   margin-left: 20px;
+}
+
+
+
+main .chart .statsList{
+  height: 8em;
+  margin: 0em 0em 0em 0em;
+  gap: 0.8em;
+  
+}
+
+main .chart .statsList .container{
+  width: 2.3em;
+  height: 100%;
+  gap: 0.8em;
+}
+
+main .chart .statsList .barContainer {
+  flex-direction: column-reverse;
+  width: 100%;
+}
+
+main .chart .statsList .barContainer .bar {
+  background-color: #E5383B;
+  width: 100%;
+  border-radius: 5px;
+  position: relative; 
+  margin-left: 58px;
+}
+
+main .chart .statsList .barContainer .bar:hover::before {
+  content: attr(data-barStat);
+  width: 3em;
+  font-weight: 700;
+  font-size: 0.8em;
+  color: #FFFBF6;
+  padding: 0.6em 0.7em 0.6em 0.7em;
+  background-color: hsl(25deg, 47%, 15%);
+  border-radius: 5px;
+  position: absolute;
+  top: -2.2rem;
+  margin-left: -0.6rem;
+}
+
+main .chart .statsList .barContainer .bar:hover {
+  cursor: pointer;
+  background-color: #a31b1d;
+}
+
+main .chart .statsList .barContainer #max {
+  background-color:#E5383B;
+}
+main .chart .statsList .barContainer #max:hover {
+  background-color: #a31b1d;
+}
+
+main .chart .statsList .day {
+  color: hsl(27deg, 10%, 52%);
+  text-align: center;
+  font-size: 0.8em;
+  margin-left: 66px;
+  font-family: 'Lato';
+}
+
+
+.chart-separator {
+    border: 1px solid rgb(220, 203, 192);
+    width: 93%;
+    margin: 1em 1em 1em 1em ;
+}
+
+.chart-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-around ;
+    margin: 20px;
+}
+
+.chart-info-total{
+    font-family: 'Lato';
+    color: #6c6969;
+    display: block;
+    text-align: left;
+    margin-right: 160px;
+    line-height: 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.bold{
+    font-size: 35px;
+    color: black;
+    font-weight: 800;
+}
+  
+.chart-info-last{
+    display: inline-block;
+    text-align: left ;
+    line-height: 0;
+    font-family: 'Lato';
+    color: #6c6969;
+}
+
+.bold1{
+    color: black;
+}
+
+@media (max-width: 480px) {
+    .text {
+      font-size: 16px;
+    }
+  }
+
+
+
+
+  
