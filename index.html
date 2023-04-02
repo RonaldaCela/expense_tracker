@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <title> Expenses chart component</title>
+  </head>
+
+
+
+<body>
+
+  <main class="flex column" >
+    <div class="loader">
+      <div class="text">
+        <p> My balance</p>
+        <b>
+          <p class="text1"> $921.48</p>
+        </b>
+      </div>
+      <img id="image" src="./images/logo.svg" alt="">
+    </div>
+
+    <div class="chart card flex column">
+      <h1>Spending - Last 7 days</h1>
+      <canvas id="myChart"></canvas>
+
+      <div class="statsList" id="statsList"> </div>
+      <div class="chart-separator"></div>
+      <div class="chart-info">
+        <div class="chart-info-total">
+          <p> Total this month </p>
+          <b>
+            <p class="bold"> $478.33 </p>
+          </b>
+        </div>
+        <div class="chart-info-last">
+          <b>
+            <p class="bold1"> +2.4% </p>
+          </b>
+          <p> from last month </p>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+
+  <script  src="script.js"></script>
+</body>
+
+</html>
